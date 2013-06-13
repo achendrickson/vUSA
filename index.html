@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9" />
+    <!-- On iOS, as part of optimizing your web application, have it use the
+    standalone mode to look more like a native application. When you use this
+    standalone mode, Safari is not used to display the web content—specifically,
+    there is no browser URL text field at the top of the screen or button bar
+    at the bottom of the screen. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Controls the dimensions and scaling of the browser window in iOS,
+    Android, webOS, Opera Mini, Opera Mobile and Blackberry. width: controls
+    the width of the viewport initial-scale: controls the zoom level when the
+    page is first loaded maximum-scale: control how users are allowed to zoom
+    the page in or out user-scalable: control how users are allowed to zoom
+    the page in or out -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- Sets the style of the status bar for a web application when in standalone mode -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title></title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/dojo/dijit/themes/claro/claro.css">
+    <link rel='stylesheet' type='text/css' href='http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/mobile/themes/iphone/FixedSplitter.css' />
+    <link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/esri/css/esri.css" />
+    <script type="text/javascript">
+      var dojoConfig = {
+        parseOnLoad: true,
+        packages: [{
+          name: "esriTemplate",
+          location: location.pathname.replace(/\/[^/]+$/, '')
+        }]
+      };
+    </script>
+    <script type="text/javascript" src="http://serverapi.arcgisonline.com/jsapi/arcgis/3.3compact"></script>
+    <script type="text/javascript" src="javascript/layout.js"></script>
+    <script type="text/javascript" src="javascript/desktopUtils.js"></script>
+    <script src="javascript/moveableUtils.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        dojo.addOnLoad(Init);
+    </script>
+</head>
+<body class="claro">
+    <div id="loginbackground" style="width: 100%; height: 100%; display: block; z-index: 10">
+    </div>
+    <div id="map">
+    </div>
+    <div id="map1">
+    </div>
+    <div id="divAppContainer" class="divAppContainer hideContainerHeight" style="display: none;">
+        <div id="divAppHolder" class="divAppHolder">
+            <div id="divAppContent">
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <table cellpadding="2" cellspacing="2">
+                                <tr>
+                                    <td align="center" colspan="3" style="color: #4E81B0;">
+                                        Share this map
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30px;" align="center" id="tdFacebook">
+                                        <img title="Facebook" class="imgShare" id="imgFacebook" src="images/facebook.png"
+                                            onclick="Share1('facebook');" />
+                                    </td>
+                                    <td style="width: 30px;" align="center" id="tdTwitter">
+                                        <img title="Twitter" class="imgShare" id="imgTwitter" src="images/twitter.png" onclick="Share1('twitter');" />
+                                    </td>
+                                    <td style="width: 30px;" align="center" id="tdMail">
+                                        <img title="Email" class="imgShare" id="imgMail" src="images/email.png" onclick="Share1('mail');" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="divEventConatiner" class="backGroundImage" style="display: none;">
+        <div id="divContainer" align="center" class="divContainer" style="display: none;
+            z-index: 20">
+            <table class="tblHeader" style="width: 100%;" id="tblHeaderForEvents">
+                <tr style="height: 23px;" align="center" valign="top">
+                    <td class="tdHeader" align="left" valign="middle" id="tdDialogHeader" style="padding-left: 10px;
+                        font-size: 14px; font-weight: bold;">
+                        Select event(s)
+                    </td>
+                </tr>
+            </table>
+            <div id="divAddressResultContainer" style="margin: 8px 8px 0px 8px;">
+            </div>
+            <div id="divLoginContainer" style="margin: 8px 8px 0px 8px;">
+                <table cellpadding="5" cellspacing="0" style="width: 100%;" class="dialogTable">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="ESFMainContainer">
+                                    <table cellpadding="0" cellspacing="0" id="tblPortalList">
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="position: absolute; left: 5px; bottom: 14px; display: none;" id="Checkbox">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="clearLayers" value="checked" />
+                            <div style="top: 5px; position: absolute; left: 25px; width: 70px;">
+                                Clear map
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="customButton">
+                <table style="width: 100%; height: 100%;" onclick="EventAndPortalSelection();">
+                    <tr>
+                        <td align="center" valign="middle">
+                            OK
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="backGroundImage" class="backGroundImage" style="visibility: hidden">
+        <div id="divAddContent" align="center" class="divAddContentContainer" style="display: none;">
+            <table class="tblHeader" style="width: 100%;" id="divAddContentId">
+                <tr style="height: 30px;" align="center" valign="top">
+                    <td class="tdHeader" align="left" valign="middle" style="padding-left: 10px; font-size: 12px;
+                        font-weight: bold;" id="AddHeaderConetent">
+                    </td>
+                    <td style="width: 10%;" align="right">
+                        <img src="images/close.png" title="Close" style="cursor: pointer; width: 16px; height: 16px;
+                            padding-right: 5px; padding-top: 5px;" onclick="CloseAddContentsContainer();" />
+                    </td>
+                </tr>
+            </table>
+            <div id="divAddContentContainer">
+            </div>
+            <div id="tabContainerMainDiv" style="width: 520px; height: 400px">
+            </div>
+        </div>
+    </div>
+    <div id="DetailsLayoutContainer" class="backGroundImage" style="display: none;">
+        <div id="DetailsLayoutContent" align="center" class="divAddContentContainer" style="display: none;">
+            <table class="tblHeader" style="width: 100%;" id="detailstable">
+                <tr style="height: 30px;" align="center" valign="top">
+                    <td class="tdHeader" align="left" valign="middle" style="padding-left: 10px; font-size: 12px;
+                        font-weight: bold;" id="detailsheader">
+                        Item details
+                    </td>
+                    <td style="width: 10%;" align="right">
+                        <img src="images/back.png" title="Back to content selector" style="cursor: pointer;
+                            width: 16px; height: 16px; padding-right: 5px; padding-top: 5px;" onclick="CloseDetailsContentsContainer();" />
+                    </td>
+                </tr>
+            </table>
+            <div id="addDetailsContainer">
+            </div>
+        </div>
+    </div>
+    <div id="loadingIndicatorAdditionalContent" class="loadingIndicatorAdditionalContent"
+        style="display: none;">
+        <table style="width: 100%; height: 100%;">
+            <tr align="center" valign="middle">
+                <td>
+                    <img src="images/loader.gif" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="divLoadingIndicator" class="divLoadingIndicator" style="display: none;">
+        <table style="width: 100%; height: 100%;">
+            <tr align="center" valign="middle">
+                <td>
+                    <img src="images/loader.gif" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

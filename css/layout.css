@@ -1,0 +1,94 @@
+﻿html, body
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    overflow: hidden;
+}
+
+#header
+{
+    margin: 0;
+}
+
+#title
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+#subtitle
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+#rightPane
+{
+    width: 20%;
+}
+
+
+#leftPaneContent
+{
+    height: 100%;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+}
+
+#leftPaneHeader
+{
+    margin: 0;
+}
+
+
+#leftPaneBody
+{
+    margin: 0;
+}
+
+#leftPaneBody .panel_content
+{
+    padding: 10px;
+}
+
+#tabLink
+{
+    text-decoration: none;
+    color: #3f3f3f;
+}
+
+#map
+{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 0;
+}
+.esriScalebar
+{
+    padding-left: 15px;
+}
+
+
+#rightPanelToolbar
+{
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+
+#leftPanelToolbar
+{
+    display: none;
+}

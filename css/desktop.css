@@ -1,0 +1,704 @@
+html, body
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+body
+{
+    overflow: hidden;
+    font-family: verdana !important;
+}
+
+#mainWindow
+{
+    width: 100%;
+    height: 100%;
+}
+.esriErrorMsg
+{
+    background-color: RGB(170, 215, 253) !important;
+    text-align: left !important;
+    margin-top: 5px !important;
+}
+#header
+{
+    margin: 0;
+}
+#header
+{
+    height: 55px;
+    left: 0px !important;
+    top: 0px !important;
+    padding: 0px !important;
+    width: 100% !important;
+    background: -moz-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%);
+    background: -webkit-linear-gradient(top, #FDFDFD 0%, #EAEAEA 50%);
+    -webkit-box-shadow: 0px 3px 10px #888888;
+    z-index: 100;
+}
+
+.detailsContentTable
+{
+   height: 100%;
+   width: 100%; 
+}
+
+.itemTitle    
+{
+ color: #21759b;
+ font-weight: bold;
+ font-size: 18px !important;   
+}
+.detailsImgCell
+{
+  border: 1px solid #BEBEBE;  
+}
+
+.detailDescription 
+{
+ height: 30px;
+ vertical-align: top;
+ font-weight: bold;
+ border-top: 1px solid #BEBEBE;  
+ padding-top: 5px;     
+}
+
+.tdBreakWord {
+display: inline-block;
+word-break: break-all;
+word-wrap: break-word;
+}
+
+.dijitDialogTitleBar
+{
+    background: -moz-linear-gradient(top, #41417B 0%, #27275E 50%) !important;
+    background: -webkit-linear-gradient(top, #41417B 0%, #27275E 50%) !important;
+    background-image: "" !important;
+    border-radius: 5px 5px 0px 0px !important;
+    border: 0px !important;
+}
+.dijitDialogTitle
+{
+    color: #fff !important;
+    font-weight: bold !important;
+}
+
+.dijitInputInner
+{
+    font-weight: normal !important;
+}
+#leftPane
+{
+    -webkit-box-shadow: inset 0px 0px 10px #888888;
+    -moz-box-shadow: inset 0px 0px 10px #888888;
+}
+#title
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+#subtitle
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+#rightPane
+{
+    width: 20%;
+}
+
+.leftPane
+{
+    width: 16%;
+    top: 50px !important;
+    left: 0px !important;
+    height: 92% !important;
+}
+.leftPane1
+{
+    width: 0%;
+    top: 50px !important;
+    left: 0px !important;
+    height: 92% !important;
+}
+#loginbackground
+{
+    background-image: url('../images/loginbg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#leftPaneContent
+{
+    height: 90%;
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+}
+.dijitDialogPaneActionBar
+{
+    background-color: #fff !important;
+    padding: 3px 5px 2px 6px !important;
+    border-top: 0px !important;
+    margin: 10px 5px -5px !important;
+    border-radius: 0 0 5px 5px !important;
+}
+.esriSignInDialog
+{
+    box-shadow: 0px 0px 20px #666 !important;
+    border-radius: 5px !important;
+}
+#leftPaneHeader
+{
+    margin: 0;
+}
+
+#leftPaneBody
+{
+    margin: 0;
+}
+
+#tabLink
+{
+    text-decoration: none;
+    color: #3f3f3f;
+}
+
+#map
+{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 0;
+    left: 0px;
+    top: 61px !important;
+    width: 100%;
+    height: 92%;
+}
+#legendDiv
+{
+    height: 100% !important;
+    padding-left: 10px;
+}
+.HeaderRound
+{
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #2B5676;
+}
+
+.Header
+{
+    height: 35px;
+    width: 35px;
+}
+.claro .dijitContentPane
+{
+    padding: 0px !important;
+}
+.esriScalebar
+{
+    padding-left: 15px;
+}
+
+.map .bingLogo-lg
+{
+    left: 18px !important;
+}
+
+#rightPanelToolbar
+{
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+.esriSignInDialog
+{
+    width: 400px !important;
+    top: 32% !important;
+    left: 36% !important;
+}
+.stateDropDown
+{
+    top: 42% !important;
+    left: 36% !important;
+    position: absolute;
+    z-index: 1000;
+}
+.esriIdCancel, .dijitDialogCloseIcon
+{
+    display: none !important;
+}
+.esriIdSubmit
+{
+    margin: 5px 131px;
+}
+.dijitTextBox
+{
+    width: 99% !important;
+    margin: 5px 0px !important;
+}
+/*sharing css*/
+.divAppContainer
+{
+    position: absolute;
+    z-index: 1000;
+    top: 58px;
+    right: 76px;
+}
+
+.dijitDialogPaneContentArea div
+{
+    color: #27275E !important;
+    font-weight: bold !important;
+}
+.dijitDialogPaneContentArea
+{
+    margin: -26px -8px !important;
+    padding: 23px 8px !important;
+}
+.dijitDialogPaneContentArea table
+{
+    color: #666 !important;
+}
+.claro .dijitButton .dijitButtonNode, .claro .dijitDropDownButton .dijitButtonNode, .claro .dijitComboButton .dijitButtonNode, .claro .dijitToggleButton .dijitButtonNode
+{
+    background-image: "" !important;
+    border: none;
+    color: #F5F5DC;
+    cursor: pointer;
+    background-color: #2F2F67;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100px;
+    margin-top: 2px;
+    background-image: -webkit-linear-gradient(#ffffff 0px, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 100%) !important;
+    background-image: -moz-linear-gradient(#ffffff 0px, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 100%) !important;
+}
+.hideContainerHeight
+{
+    overflow: hidden;
+    -webkit-transition: height 0.5s ease-in;
+    -moz-transition: height 0.5s ease-in;
+    -o-transition: height 0.5s ease-in;
+    transition: height 0.5s ease-in;
+    height: 0px;
+}
+.divAppHolder
+{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: RGB(240,240,240);
+    border: 1px solid #0D3558;
+}
+
+.imgShare
+{
+    height: 30px !important;
+    width: 30px !important;
+    cursor: pointer;
+}
+
+.showContainerHeight
+{
+    overflow: hidden;
+    -webkit-transition: height 0.5s ease-in;
+    -moz-transition: height 0.5s ease-in;
+    -o-transition: height 0.5s ease-in;
+    transition: height 0.5s ease-in;
+    height: 100%;
+}
+.ESFMainContainer
+{
+    border: 1px solid #CCCCCC !important;
+}
+
+.tableHeader
+{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+.loadMapButton
+{
+    margin-left: 150px;
+}
+.labelEvent
+{
+    background-color: #F2F5F9;
+    padding: 2px 2px 2px 5px;
+}
+
+.labelEventSecondRow
+{
+    padding: 2px 2px 2px 5px;
+    background-color: #F9F9F9;
+}
+.labelEventNew
+{
+    background-color: #4B95E5 !important;
+    padding: 2px 2px 2px 5px;
+    color: White;
+}
+.labelEventNew1
+{
+    background-color: #4B95E5 !important;
+    padding: 2px 2px 2px 5px;
+    color: White;
+}
+
+.labelEvent:hover
+{
+    background-color: #AAD7FD;
+    cursor: pointer;
+}
+.labelEventSecondRow:hover
+{
+    background-color: #AAD7FD;
+    cursor: pointer;
+}
+.ESFMainContainer
+{
+    height: 149px;
+    overflow: auto;
+    border: 1px solid black;
+}
+
+.divContainer
+{
+    background-color: White;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0px 10px #AAA;
+    height: 240px;
+    position: absolute;
+    top: 32%;
+    left: 36%;
+    width: 400px;
+    z-index: 1000;
+}
+
+.tblHeader
+{
+    background-color: #2F2F67;
+    color: White;
+    margin-top: 0px;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: gray 1px solid;
+}
+
+.customButton
+{
+    border: none;
+    color: #F5F5DC;
+    cursor: pointer;
+    background-color: #2F2F67;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100px;
+    margin-top: 8px;
+}
+
+.labelHeader
+{
+    font-weight: bold;
+    color: #2F2F67;
+    font-size: 12px;
+}
+
+a
+{
+    color: #369;
+}
+
+#title
+{
+    color: #334453;
+    font-size: 24px;
+    text-align: left;
+    text-shadow: 0 1px 0 #EEE;
+    padding-top: 10px;
+    padding-left: 92px;
+}
+#applicationIcon
+{
+    height: 47px;
+}
+#subtitle
+{
+    color: #444;
+    padding-left: 15px;
+    word-wrap: break-word !important;
+}
+
+#rightPane
+{
+    background-color: #e3e9ee;
+    color: #3f3f3f;
+    border: solid 1px #999;
+}
+#leftPane
+{
+    background-image: url('../images/LeftPanel.png');
+    background-repeat: repeat;
+}
+
+#leftPaneHeader
+{
+    -webkit-border-radius: 99px;
+    background-color: #DFE1E2;
+    height: 30px;
+    width: 185px;
+    overflow: hidden;
+    margin-left: 13px;
+}
+
+.imgOptions
+{
+    height: 35px !important;
+    width: 35px !important;
+    vertical-align: middle;
+    cursor: pointer;
+    float: right;
+}
+
+/*added new css*/
+.divAddContentContainer
+{
+    background-color: White;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0px 10px #AAA;
+    font-size: 12px !imporatnt;
+    font-weight: normal;
+    height: 400px;
+    left: 31%;
+    position: absolute;
+    top: 21%;
+    width: 520px;
+    z-index: 1000;
+}
+.loadingIndicatorAdditionalContent
+{
+    position: absolute;
+    width: 520px;
+    height: 400px;
+    z-index: 1001;
+}
+.backGroundImage
+{
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    z-index: 900;
+    width: 100%;
+    height: 100%;
+}
+
+.addContentContainer
+{
+    height: 317px;
+    overflow: auto;
+    width: 100%;
+}
+
+.imageContainer
+{
+    color: #2F2F67;
+    width: 150px;
+}
+
+.descriptionContainer
+{
+    color: #2F2F67;
+    width: 230px;
+    padding-left: 5px;
+    border-bottom: 1px solid #BEBEBE;
+    font-weight: normal;
+}
+
+.selectBorder
+{
+    border-bottom: 1px solid #BEBEBE;
+}
+.titleContainer
+{
+    color: #2F2F67;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.thumbnailContainer
+{
+    width: 75px;
+}
+
+.customAddContentButton
+{
+    border: none;
+    color: #F5F5DC;
+    cursor: pointer;
+    background-color: #2F2F67;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 25px;
+    width: 102px;
+    margin-top: 10px;
+}
+
+.selectHyperlink
+{
+    border-bottom: 1px solid #BEBEBE;
+    color: #2F2F67;
+}
+.divAddressPodPlaceHolder
+{
+    color: #2F2F67;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    position: relative;
+}
+.imgSearchLocate
+{
+    vertical-align: middle;
+    cursor: pointer;
+    bottom: 14px;
+    right: 24px;
+    position: absolute;
+}
+
+/* styles for tab container */
+
+.claro .dijitTabContainerBottom-tabs .dijitTab
+{
+    width: 158px !important;
+    background-color: #FEAB29 !important;
+    top: 0px !important;
+    padding: 7px !important;
+    color: black !important;
+    background-position: 0px 0px !important;
+}
+.claro .dijitTab
+{
+    border: 0px none !important;
+}
+
+.claro .dijitTabContainerBottom-tabs .dijitTabChecked
+{
+    background-image: url("../images/tab.png") !important;
+    background-position: 0px 0px !important;
+    color: white !important;
+}
+
+.dijitTab .tabLabel
+{
+    min-height: 0px !important;
+}
+
+.dijitTabContainerTop-tabs .dijitTab, .dijitTabContainerBottom-tabs .dijitTab
+{
+    height: 23px !important;
+}
+
+.claro .dijitSelect, .claro .dijitSelect .dijitButtonContents, .claro .dijitTextBox, .claro .dijitTextBox .dijitButtonNode
+{
+    width: 370px !important;
+}
+
+.dropDownContainer
+{
+    height: 22px;
+    position: relative;
+    margin-top: -20px;
+}
+
+.dropDowCell
+{
+    height: 22px;
+    position: relative;
+    margin-top: -45px;
+}
+.divLoadingIndicator
+{
+    height: 100%;
+    width: 100%;
+    display: none;
+    font-family: Verdana;
+    z-index: 1000;
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,0);
+}
+
+.hideContainerHeight1
+{
+    overflow: hidden;
+    -webkit-transition: width 0.5s ease-in;
+    -moz-transition: width 0.5s ease-in;
+    -o-transition: width 0.5s ease-in;
+    transition: width 0.5s ease-in;
+}
+
+.showContainerHeight1
+{
+    overflow: hidden;
+    -webkit-transition: width 0.5s ease-in;
+    -moz-transition: width 0.5s ease-in;
+    -o-transition: width 0.5s ease-in;
+    transition: width 0.5s ease-in;
+    width: 100%;
+}
+
+.alertDialog
+{
+    width: 300px;
+}
+
+.alertDialog table
+{
+    width: 100%;
+}
+
+#divMessage
+{
+    border: none;
+    height: 40px;
+    text-align: left;
+    width: 270px;
+}
+
+.claro .dijitDialog
+{
+    border: 0px !important;
+}
+
+.dijitBorderContainer
+{
+    padding: 0px !important;
+}
+.titlePane
+{
+ background-color: #2F2F67 !important;   
+    }
